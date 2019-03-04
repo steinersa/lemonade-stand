@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LemonadeStand.Day">
+    <Position X="8.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABCAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Day.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LemonadeStand.Inventory">
+    <Position X="4.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAggAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Inventory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LemonadeStand.Player">
+    <Position X="2.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAEAAAAAAAEAAAAAAAAAgABBQA=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LemonadeStand.Customer">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAARAAAQAAAAAAAAAACAAAAAIAAA=</HashCode>
+      <FileName>Customer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LemonadeStand.Recipe">
+    <Position X="6.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAQCAAAAA=</HashCode>
+      <FileName>Recipe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LemonadeStand.Store">
+    <Position X="2.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAQACAAAAAA=</HashCode>
+      <FileName>Store.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LemonadeStand.Weather">
+    <Position X="8.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Weather.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LemonadeStand.Game">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAACAAAggCAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Game.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LemonadeStand.UserInterface">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABEAAgAAAAAAAAAAAAEAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>UserInterface.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
