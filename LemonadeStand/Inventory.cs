@@ -10,7 +10,7 @@ namespace LemonadeStand
         public int lemonInventory;
         public int sugarInventory;
         public int iceInventory;
-        public Player player;
+       
 
         //constructor
         public Inventory()

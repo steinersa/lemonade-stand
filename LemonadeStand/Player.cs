@@ -9,13 +9,12 @@ namespace LemonadeStand
         //member variables
         public string name;
         public string beginDayChoice;
-
-        public double moneyInPocket;
+        public double cash;
 
         //constructor
-        public Player()
+        public Player(double cash)
         {
-
+            this.cash = cash;
         }
 
         //member methods
@@ -26,9 +25,9 @@ namespace LemonadeStand
             name = Console.ReadLine();
         }
 
-        public void ChooseWhatToDoAtStartOfDay(Inventory inventory, Store store)
+        public void ChooseWhatToDoAtStartOfDay(Inventory inventory, Store store, Player player)
         {
-            Console.WriteLine("Before you begin selling for the day, would you like to 'check inventory', 'go to the store', 'change recipe', or 'change price'? If you're all set to go, please type 'open for business'!");
+            Console.WriteLine("Before you begin selling for the day, would you like to 'check inventory', 'go to store', 'change recipe', or 'change price'? If you're all set to go, please type 'open for business'!");
             beginDayChoice = Console.ReadLine();
 
 
@@ -36,10 +35,11 @@ namespace LemonadeStand
             {
                 case "check inventory":
                     inventory.DisplayInventory();
-                    ChooseWhatToDoAtStartOfDay(inventory, store);
+                    ChooseWhatToDoAtStartOfDay(inventory, store, player);
                     break;
-                case "go to the store":
-                    
+                case "go to store":
+                    store.SellToPlayer(player, inventory, store);
+                    ChooseWhatToDoAtStartOfDay(inventory, store, player);
                     break;
                 case "change recipe":
                     //go to change recipe
@@ -52,7 +52,7 @@ namespace LemonadeStand
                     break;
                 default:
                     Console.Write("Oops, not a choice. Please enter a valid option from above!");
-                    ChooseWhatToDoAtStartOfDay(inventory, store);
+                    ChooseWhatToDoAtStartOfDay(inventory, store, player);
                     break;
             }
         }
