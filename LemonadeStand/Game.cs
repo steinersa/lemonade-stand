@@ -8,10 +8,9 @@ namespace LemonadeStand
     {
         //member variables (Has A)
         public Player player;
-
-        public int RunningMoneyTotal;
+        public Customer customer;
+        public int runningMoneyTotal;
         public int weeklyWeatherForcast;
-        public int Day;
 
 
         //constructor
@@ -28,12 +27,17 @@ namespace LemonadeStand
             player.GetName();
             Console.WriteLine("Nice to meet you, {0}! Directions are as follows...", player.name);
             Weather weather = new Weather();
-            weather.GenerateWeeklyForcast(); //display weekly forcast?
+            weather.GenerateWeeklyForcast();
         }
 
-        public void StartDay()
+        public void Day1()
         {
-            throw new System.NotImplementedException();
+           
+        }
+
+        public void Day2()
+        {
+
         }
     }
 }

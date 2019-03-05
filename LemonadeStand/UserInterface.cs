@@ -8,28 +8,32 @@ namespace LemonadeStand
     {
         //member variables
 
+
         //constructor
+        public UserInterface()
+        {
+
+        }
 
         //member methods
-
         public void DisplayWeeklyWeatherForcast()
         {
-            throw new System.NotImplementedException();
+            
         }
 
         public void DisplayActualTemp()
         {
-            throw new System.NotImplementedException();
+            
         }
 
         public void DisplayInventory()
         {
-            throw new System.NotImplementedException();
+            
         }
 
         public void DisplayRecipe()
         {
-            throw new System.NotImplementedException();
+            
         }
     }
 }

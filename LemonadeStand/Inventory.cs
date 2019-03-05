@@ -6,8 +6,18 @@ namespace LemonadeStand
 {
     public class Inventory
     {
-        private int LemonInventory;
-        private int SugarInventory;
-        private int IceInventory;
+        //member variables
+        public int LemonInventory;
+        public int SugarInventory;
+        public int IceInventory;
+
+        //constructor
+        public Inventory()
+        {
+
+        }
+
+        //member methods
+
     }
 }

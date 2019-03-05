@@ -6,13 +6,21 @@ namespace LemonadeStand
 {
     public class Store
     {
-        private int LemonsForSale;
-        private int SugarForSale;
-        private int IceForSale;
+        //member variables
+        public int LemonsForSale;
+        public int SugarForSale;
+        public int IceForSale;
 
+        //constructor
+        public Store()
+        {
+
+        }
+
+        //member methods
         public void SellToPlayer()
         {
-            throw new System.NotImplementedException();
+            
         }
     }
 }

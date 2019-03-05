@@ -25,27 +25,27 @@ namespace LemonadeStand
 
         public void MakeLemonade()
         {
-            throw new System.NotImplementedException();
+            
         }
 
         public void GoToStore()
         {
-            throw new System.NotImplementedException();
+            
         }
 
         public void BuyInventory()
         {
-            throw new System.NotImplementedException();
+            
         }
 
         public void CheckInventory()
         {
-            throw new System.NotImplementedException();
+            
         }
 
         public void ChangeRecipe()
         {
-            throw new System.NotImplementedException();
+            
         }
     }
 }

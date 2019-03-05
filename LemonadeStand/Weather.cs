@@ -18,13 +18,27 @@ namespace LemonadeStand
         //member methods
         public void GenerateWeeklyForcast()
         {
-            weeklyForcast = 
-            throw new System.NotImplementedException();
+            int[] weeklyweatherForcastArray = new int[7];
+            weeklyweatherForcastArray[0] = RandomNumber(60, 110);
+            weeklyweatherForcastArray[1] = RandomNumber(60, 110);
+            weeklyweatherForcastArray[2] = RandomNumber(60, 110);
+            weeklyweatherForcastArray[3] = RandomNumber(60, 110);
+            weeklyweatherForcastArray[4] = RandomNumber(60, 110);
+            weeklyweatherForcastArray[5] = RandomNumber(60, 110);
+            weeklyweatherForcastArray[6] = RandomNumber(60, 110);
+
+            foreach (int temp in weeklyweatherForcastArray)
+            {
+                Console.WriteLine(temp);
+            }
+
         }
 
-        public void GenerateActualTemp()
+        public int RandomNumber(int min, int max)
         {
-            throw new System.NotImplementedException();
+            Random random = new Random();
+            return random.Next(min, max);
         }
+
     }
 }

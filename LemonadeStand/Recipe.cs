@@ -6,9 +6,19 @@ namespace LemonadeStand
 {
     public class Recipe
     {
-        private int NumberOfLemonsAdded;
-        private int AmountOfSugarAdded;
-        private int AmountOfIceAdded;
-        private int PriceOfLemonade;
+        //member variables
+        public int NumberOfLemonsAdded;
+        public int AmountOfSugarAdded;
+        public int AmountOfIceAdded;
+        public int PriceOfLemonade;
+
+        //constructor
+        public Recipe()
+        {
+
+        }
+
+        //member methods
+
     }
 }
