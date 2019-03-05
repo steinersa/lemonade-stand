@@ -9,7 +9,6 @@ namespace LemonadeStand
         //member variables
         public string name;
         public string beginDayChoice;
-        public Inventory inventory;
 
         public double moneyInPocket;
 
@@ -27,18 +26,20 @@ namespace LemonadeStand
             name = Console.ReadLine();
         }
 
-        public void ChooseWhatToDoAtStartOfDay()
+        public void ChooseWhatToDoAtStartOfDay(Inventory inventory, Store store)
         {
             Console.WriteLine("Before you begin selling for the day, would you like to 'check inventory', 'go to the store', 'change recipe', or 'change price'? If you're all set to go, please type 'open for business'!");
             beginDayChoice = Console.ReadLine();
+
 
             switch (beginDayChoice)
             {
                 case "check inventory":
                     inventory.DisplayInventory();
+                    ChooseWhatToDoAtStartOfDay(inventory, store);
                     break;
                 case "go to the store":
-                    //go to store
+                    
                     break;
                 case "change recipe":
                     //go to change recipe
@@ -51,7 +52,7 @@ namespace LemonadeStand
                     break;
                 default:
                     Console.Write("Oops, not a choice. Please enter a valid option from above!");
-                    ChooseWhatToDoAtStartOfDay();
+                    ChooseWhatToDoAtStartOfDay(inventory, store);
                     break;
             }
         }

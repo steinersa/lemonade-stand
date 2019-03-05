@@ -24,10 +24,9 @@ namespace LemonadeStand
 
         public void DisplayInventory()
         {
-            Console.WriteLine("Your lemon inventory is {0}:", this.lemonInventory);
-            Console.WriteLine("Your sugar inventory is {0}:", this.sugarInventory);
-            Console.WriteLine("Your ice inventory is {0}:", this.iceInventory);
-            player.ChooseWhatToDoAtStartOfDay();
+            Console.WriteLine("Your lemon inventory is: {0}", this.lemonInventory);
+            Console.WriteLine("Your sugar inventory is: {0}", this.sugarInventory);
+            Console.WriteLine("Your ice inventory is: {0}", this.iceInventory);
         }
 
     }

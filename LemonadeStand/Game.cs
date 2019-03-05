@@ -10,7 +10,7 @@ namespace LemonadeStand
         public Player player;
         public Weather weeklyForcast;
         public Inventory inventory;
-
+        public Store store;
 
         //constructor
         public Game()
@@ -33,7 +33,8 @@ namespace LemonadeStand
         public void RunGame() //some sort of loop
         {
             inventory = new Inventory();
-            player.ChooseWhatToDoAtStartOfDay();
+            store = new Store();
+            player.ChooseWhatToDoAtStartOfDay(inventory, store);
         }
 
     }
