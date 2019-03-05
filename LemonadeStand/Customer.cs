@@ -11,11 +11,11 @@ namespace LemonadeStand
         public int weatherPreference;
         public double moneyToSpend;
         public string recipePreference;
-        public Day day;
-        public Recipe price;
-        public Recipe lemons;
-        public Recipe sugar;
-        public Recipe ice;
+        //public Day day;
+        //public Recipe price;
+        //public Recipe lemons;
+        //public Recipe sugar;
+        //public Recipe ice;
         //need to still instanciate these somewhere
 
         //constructor
@@ -31,10 +31,7 @@ namespace LemonadeStand
         //member methods
         public void BuyLemonade()
         {
-            if (this.weatherPreference == day.actualTemp && this.moneyToSpend == price.something  && this.recipePreference == )
-            {
-                
-            }
+            //if (this.weatherPreference == day.actualTemp && this.moneyToSpend == price.something  && this.recipePreference == )
         }
     }
 }

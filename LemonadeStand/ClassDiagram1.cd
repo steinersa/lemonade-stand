@@ -3,7 +3,7 @@
   <Class Name="LemonadeStand.Day">
     <Position X="8.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAACAABAAAAAAAEQ=</HashCode>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
       <FileName>Day.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -17,15 +17,8 @@
   <Class Name="LemonadeStand.Player">
     <Position X="2.75" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAABAAAAAAAAAAEAAAAAAAEAAAAAAAAAgABBQA=</HashCode>
+      <HashCode>AAAAAgAABAAAAAAAAAAEAAAAAAAEAAAAEAAAAgABBQA=</HashCode>
       <FileName>Player.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="LemonadeStand.Customer">
-    <Position X="0.75" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAIAAAEAAAAAAAAAAAgAAA=</HashCode>
-      <FileName>Customer.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.Recipe">
@@ -43,16 +36,16 @@
     </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.Weather">
-    <Position X="8.75" Y="1.25" Width="1.5" />
+    <Position X="8.75" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAAAAQAAAAAAAAAAAQ=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>Weather.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.Game">
     <Position X="5.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAgABAAAAAACACAAAAJAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAJAAAAAAAAQBAAAAAAAAAAA=</HashCode>
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -61,6 +54,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAABEAAgAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
       <FileName>UserInterface.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LemonadeStand.Customer">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAIAAAEAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Customer.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

@@ -8,9 +8,8 @@ namespace LemonadeStand
     {
         //member variables (Has A)
         public Player player;
-        public Customer customer;
-        public int runningMoneyTotal;
-        public int weeklyWeatherForcast;
+        public Weather weeklyForcast;
+        public Inventory inventory;
 
 
         //constructor
@@ -23,21 +22,19 @@ namespace LemonadeStand
         public void GameSetup()
         {
             Console.WriteLine("Welcome to your new lemonade stand! Please enter your name before we go any further...");
-            Player player = new Player();
+            player = new Player();
             player.GetName();
             Console.WriteLine("Nice to meet you, {0}! Directions are as follows...", player.name);
-            Weather weather = new Weather();
-            weather.GenerateWeeklyForcast();
+            weeklyForcast = new PredictedWeather();
+            weeklyForcast.GenerateWeather();
+            RunGame();
         }
 
-        public void Day1()
+        public void RunGame() //some sort of loop
         {
-           
+            inventory = new Inventory();
+            player.ChooseWhatToDoAtStartOfDay();
         }
 
-        public void Day2()
-        {
-
-        }
     }
 }

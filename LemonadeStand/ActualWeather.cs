@@ -4,22 +4,21 @@ using System.Text;
 
 namespace LemonadeStand
 {
-    public class Day
+    class ActualWeather:Weather
     {
         //member variables
-        public int dailyProfit;
-        public int lemonadeAvailableToSell;
-       
 
         //constructor
-        public Day()
+        public ActualWeather()
         {
 
         }
 
         //member methods
-        
-
+        public override void GenerateWeather()
+        {
+            weather = RandomNumber(60, 110);
+        }
 
     }
 }
