@@ -18,6 +18,7 @@ namespace LemonadeStand
         public override void GenerateWeather()
         {
             weather = RandomNumber(60, 110);
+            Console.WriteLine(weather);
         }
 
     }

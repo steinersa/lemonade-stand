@@ -25,7 +25,7 @@ namespace LemonadeStand
             name = Console.ReadLine();
         }
 
-        public void ChooseWhatToDoAtStartOfDay(Inventory inventory, Store store, Player player)
+        public void ChooseWhatToDoAtStartOfDay(Inventory inventory, Store store, Player player, Recipe recipe)
         {
             Console.WriteLine("Before you begin selling for the day, would you like to 'check inventory', 'go to store', 'change recipe', or 'change price'? If you're all set to go, please type 'open for business'!");
             beginDayChoice = Console.ReadLine();
@@ -35,24 +35,26 @@ namespace LemonadeStand
             {
                 case "check inventory":
                     inventory.DisplayInventory();
-                    ChooseWhatToDoAtStartOfDay(inventory, store, player);
+                    ChooseWhatToDoAtStartOfDay(inventory, store, player, recipe);
                     break;
                 case "go to store":
-                    store.SellToPlayer(player, inventory, store);
-                    ChooseWhatToDoAtStartOfDay(inventory, store, player);
+                    store.SellToPlayer(player, inventory, store, recipe);
+                    ChooseWhatToDoAtStartOfDay(inventory, store, player, recipe);
                     break;
                 case "change recipe":
-                    //go to change recipe
+                    recipe.ChangeRecipe();
+                    ChooseWhatToDoAtStartOfDay(inventory, store, player, recipe);
                     break;
                 case "change price":
                     //go to change price
+                    ChooseWhatToDoAtStartOfDay(inventory, store, player, recipe);
                     break;
                 case "open for business":
                     //go to start day?
                     break;
                 default:
                     Console.Write("Oops, not a choice. Please enter a valid option from above!");
-                    ChooseWhatToDoAtStartOfDay(inventory, store, player);
+                    ChooseWhatToDoAtStartOfDay(inventory, store, player, recipe);
                     break;
             }
         }

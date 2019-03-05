@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LemonadeStand
 {
-    public class Store
+    public class Store //need to make sure player cash doesnt drop below zero
     {
         //member variables
         public string storeChoice;
@@ -41,7 +41,7 @@ namespace LemonadeStand
         }
 
         //member methods
-        public void SellToPlayer(Player player, Inventory inventory, Store store)
+        public void SellToPlayer(Player player, Inventory inventory, Store store, Recipe recipe)
         {
             Console.WriteLine("Would you like to buy 'lemons', 'sugar', or 'ice'? If you're all done shopping, please type 'leave store'.");
             storeChoice = Console.ReadLine();
@@ -50,22 +50,22 @@ namespace LemonadeStand
             {
                 case "lemons":
                     SellLemons(player, inventory);
-                    SellToPlayer(player, inventory, store);
+                    SellToPlayer(player, inventory, store, recipe);
                     break;
                 case "sugar":
                     SellSugar(player, inventory);
-                    SellToPlayer(player, inventory, store);
+                    SellToPlayer(player, inventory, store, recipe);
                     break;
                 case "ice":
                     SellIce(player, inventory);
-                    SellToPlayer(player, inventory, store);
+                    SellToPlayer(player, inventory, store, recipe);
                     break;
                 case "leave store":
-                    player.ChooseWhatToDoAtStartOfDay(inventory, store, player);
+                    player.ChooseWhatToDoAtStartOfDay(inventory, store, player, recipe);
                     break;
                 default:
                     Console.Write("Oops, not a choice. Please enter a valid option from above!");
-                    SellToPlayer(player, inventory, store);
+                    SellToPlayer(player, inventory, store, recipe);
                     break;
 
             }

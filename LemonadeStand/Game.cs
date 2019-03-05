@@ -11,6 +11,8 @@ namespace LemonadeStand
         public Weather weeklyForcast;
         public Inventory inventory;
         public Store store;
+        public Recipe recipe;
+        public Weather actualTemp;
 
         //constructor
         public Game()
@@ -30,11 +32,14 @@ namespace LemonadeStand
             RunGame();
         }
 
-        public void RunGame() //some sort of loop
+        public void RunGame() //some sort of loop. careful because will clear out inventory and store... need to move them out
         {
             inventory = new Inventory();
             store = new Store();
-            player.ChooseWhatToDoAtStartOfDay(inventory, store, player);
+            recipe = new Recipe();
+            actualTemp = new ActualWeather();
+            actualTemp.GenerateWeather();
+            player.ChooseWhatToDoAtStartOfDay(inventory, store, player, recipe);
         }
 
     }
