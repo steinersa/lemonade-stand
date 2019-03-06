@@ -77,19 +77,19 @@ namespace LemonadeStand
             if (lemonsPurchased == "five")
             {
                 player.cash -= priceOfFiveLemons;
-                inventory.lemonInventory =+ 5;
+                inventory.lemonInventory += 5;
                 Console.WriteLine("Thanks for your purchase! You now have {0} dollars.", player.cash);
             }
             else if (lemonsPurchased == "ten")
             {
                 player.cash -= priceOfTenLemons;
-                inventory.lemonInventory = +10;
+                inventory.lemonInventory += 10;
                 Console.WriteLine("Thanks for your purchase! You now have {0} dollars.", player.cash);
             }
             else if (lemonsPurchased == "fifteen")
             {
                 player.cash -= priceOfFifteenLemons;
-                inventory.lemonInventory = +15;
+                inventory.lemonInventory += 15;
                 Console.WriteLine("Thanks for your purchase! You now have {0} dollars.", player.cash);
             }
             else
@@ -107,19 +107,19 @@ namespace LemonadeStand
             if (sugarPurchased == "five")
             {
                 player.cash -= priceOfFiveSugar;
-                inventory.sugarInventory = +5;
+                inventory.sugarInventory += 5;
                 Console.WriteLine("Thanks for your purchase! You now have {0} dollars.", player.cash);
             }
             else if (sugarPurchased == "ten")
             {
                 player.cash -= priceOfTenSugar;
-                inventory.sugarInventory = +10;
+                inventory.sugarInventory += 10;
                 Console.WriteLine("Thanks for your purchase! You now have {0} dollars.", player.cash);
             }
             else if (sugarPurchased == "fifteen")
             {
                 player.cash -= priceOfFifteenSugar;
-                inventory.sugarInventory = +15;
+                inventory.sugarInventory += 15;
                 Console.WriteLine("Thanks for your purchase! You now have {0} dollars.", player.cash);
             }
             else
@@ -136,19 +136,19 @@ namespace LemonadeStand
             if (icePurchased == "five")
             {
                 player.cash -= priceOfFiveIce;
-                inventory.iceInventory = +5;
+                inventory.iceInventory += 5;
                 Console.WriteLine("Thanks for your purchase! You now have {0} dollars.", player.cash);
             }
             else if (icePurchased == "ten")
             {
                 player.cash -= priceOfTenIce;
-                inventory.iceInventory = +10;
+                inventory.iceInventory += 10;
                 Console.WriteLine("Thanks for your purchase! You now have {0} dollars.", player.cash);
             }
             else if (icePurchased == "fifteen")
             {
                 player.cash -= priceOfFifteenIce;
-                inventory.iceInventory = +15;
+                inventory.iceInventory += 15;
                 Console.WriteLine("Thanks for your purchase! You now have {0} dollars.", player.cash);
             }
             else

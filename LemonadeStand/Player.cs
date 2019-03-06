@@ -34,7 +34,7 @@ namespace LemonadeStand
             switch (beginDayChoice)
             {
                 case "check inventory":
-                    inventory.DisplayInventory();
+                    inventory.DisplayInventory(store);
                     ChooseWhatToDoAtStartOfDay(inventory, store, player, recipe);
                     break;
                 case "go to store":

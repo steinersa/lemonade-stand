@@ -22,7 +22,7 @@ namespace LemonadeStand
 
         //member methods
 
-        public void DisplayInventory()
+        public void DisplayInventory(Store store)
         {
             Console.WriteLine("Your lemon inventory is: {0}", this.lemonInventory);
             Console.WriteLine("Your sugar inventory is: {0}", this.sugarInventory);
