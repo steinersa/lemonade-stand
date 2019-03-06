@@ -75,7 +75,11 @@ namespace LemonadeStand
 
         public void SellLemonade()
         {
-
+            while (cupsAvailableToSell > 0)
+            {
+                //run through customers to see if they buy
+                //display day total
+            }
         }
     }
 }

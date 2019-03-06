@@ -14,6 +14,7 @@ namespace LemonadeStand
         public Recipe recipe;
         public Weather actualTemp;
         public Lemonade lemonade;
+        public Day day;
 
         //constructor
         public Game()
@@ -39,14 +40,15 @@ namespace LemonadeStand
 
         public void RunGame()
         {
+            day = new Day();
             actualTemp = new ActualWeather();
             actualTemp.GenerateWeather();
             player.ChooseWhatToDoAtStartOfDay(inventory, store, player, recipe, lemonade);
             player.MakeLemonade(inventory, recipe);
-            Console.ReadLine();
-            //player.sellLemonade
-            //display daily stats
-            //start next day (if day count less than or equal to 7)(day.GoToNextDay)
+            player.SellLemonade();
+            //day.CalculateDailyProfit();
+            //display running total make an array here that the daily profit is pushed to
+            //start next day (if run game count less than or equal to 7)
         }
 
     }

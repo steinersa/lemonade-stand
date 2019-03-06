@@ -7,8 +7,9 @@ namespace LemonadeStand
     public class Day
     {
         //member variables
-        public int dailyProfit;
-        public int lemonadeAvailableToSell;
+        public double moneySpentToday;
+        public double moneyMadeToday;
+        public double dailyProfit;
        
 
         //constructor
@@ -18,7 +19,11 @@ namespace LemonadeStand
         }
 
         //member methods
-        
+        public void CalculateDailyProfit()
+        {
+            dailyProfit = moneyMadeToday -= moneySpentToday;
+            Console.WriteLine("You made " + moneyMadeToday + " dollars today! You spent " + moneySpentToday + " dollars on supplies, making your daily profit " +dailyProfit+ " dollars!");
+        }
 
 
     }
