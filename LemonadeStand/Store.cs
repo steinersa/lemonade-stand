@@ -10,34 +10,34 @@ namespace LemonadeStand
         public string storeChoice;
 
         public string lemonsPurchased;
-        public double priceOfFiveLemons;
-        public double priceOfTenLemons;
         public double priceOfFifteenLemons;
+        public double priceOfThirtyLemons;
+        public double priceOfFortyfiveLemons;
 
         public string sugarPurchased;
-        public double priceOfFiveSugar;
-        public double priceOfTenSugar;
         public double priceOfFifteenSugar;
+        public double priceOfThirtySugar;
+        public double priceOfFortyfiveSugar;
 
         public string icePurchased;
-        public double priceOfFiveIce;
-        public double priceOfTenIce;
         public double priceOfFifteenIce;
+        public double priceOfThirtyIce;
+        public double priceOfFortyfiveIce;
 
         //constructor
         public Store()
         {
-            this.priceOfFiveLemons = 3.00;
-            this.priceOfTenLemons = 5.00;
-            this.priceOfFifteenLemons = 7.00;
+            this.priceOfFifteenLemons = 3.00;
+            this.priceOfThirtyLemons = 5.00;
+            this.priceOfFortyfiveLemons = 7.00;
 
-            this.priceOfFiveSugar = 5.00;
-            this.priceOfTenSugar = 9.00;
-            this.priceOfFifteenSugar = 13.00;
+            this.priceOfFifteenSugar = 5.00;
+            this.priceOfThirtySugar = 9.00;
+            this.priceOfFortyfiveSugar = 13.00;
 
-            this.priceOfFiveIce = 2.00;
-            this.priceOfTenIce = 4.00;
-            this.priceOfFifteenIce = 6.00;
+            this.priceOfFifteenIce = 2.00;
+            this.priceOfThirtyIce = 4.00;
+            this.priceOfFortyfiveIce = 6.00;
         }
 
         //member methods
@@ -72,24 +72,24 @@ namespace LemonadeStand
         
         public void SellLemons(Player player, Inventory inventory)
         {
-            Console.WriteLine("Would you like to buy 'five' lemons for $3.00, 'ten' for $5.00, or 'fifteen' for $7.00?");
+            Console.WriteLine("Would you like to buy 'fifteen' lemons for $3.00, 'thirty' for $5.00, or 'fortyfive' for $7.00?");
             lemonsPurchased = Console.ReadLine();
-            if (lemonsPurchased == "five")
-            {
-                player.cash -= priceOfFiveLemons;
-                inventory.lemonInventory += 5;
-                Console.WriteLine("Thanks for your purchase! You now have {0} dollars.", player.cash);
-            }
-            else if (lemonsPurchased == "ten")
-            {
-                player.cash -= priceOfTenLemons;
-                inventory.lemonInventory += 10;
-                Console.WriteLine("Thanks for your purchase! You now have {0} dollars.", player.cash);
-            }
-            else if (lemonsPurchased == "fifteen")
+            if (lemonsPurchased == "fifteen")
             {
                 player.cash -= priceOfFifteenLemons;
                 inventory.lemonInventory += 15;
+                Console.WriteLine("Thanks for your purchase! You now have {0} dollars.", player.cash);
+            }
+            else if (lemonsPurchased == "thirty")
+            {
+                player.cash -= priceOfThirtyLemons;
+                inventory.lemonInventory += 30;
+                Console.WriteLine("Thanks for your purchase! You now have {0} dollars.", player.cash);
+            }
+            else if (lemonsPurchased == "fortyfive")
+            {
+                player.cash -= priceOfFortyfiveLemons;
+                inventory.lemonInventory += 45;
                 Console.WriteLine("Thanks for your purchase! You now have {0} dollars.", player.cash);
             }
             else
@@ -102,24 +102,24 @@ namespace LemonadeStand
 
         public void SellSugar(Player player, Inventory inventory)
         {
-            Console.WriteLine("Would you like to buy 'five' packs of sugar for $5.00, 'ten' for $9.00, or 'fifteen' for $13.00?");
+            Console.WriteLine("Would you like to buy 'fifteen' packs of sugar for $5.00, 'thirty' for $9.00, or 'fortyfive' for $13.00?");
             sugarPurchased = Console.ReadLine();
-            if (sugarPurchased == "five")
-            {
-                player.cash -= priceOfFiveSugar;
-                inventory.sugarInventory += 5;
-                Console.WriteLine("Thanks for your purchase! You now have {0} dollars.", player.cash);
-            }
-            else if (sugarPurchased == "ten")
-            {
-                player.cash -= priceOfTenSugar;
-                inventory.sugarInventory += 10;
-                Console.WriteLine("Thanks for your purchase! You now have {0} dollars.", player.cash);
-            }
-            else if (sugarPurchased == "fifteen")
+            if (sugarPurchased == "fifteen")
             {
                 player.cash -= priceOfFifteenSugar;
                 inventory.sugarInventory += 15;
+                Console.WriteLine("Thanks for your purchase! You now have {0} dollars.", player.cash);
+            }
+            else if (sugarPurchased == "thirty")
+            {
+                player.cash -= priceOfThirtySugar;
+                inventory.sugarInventory += 30;
+                Console.WriteLine("Thanks for your purchase! You now have {0} dollars.", player.cash);
+            }
+            else if (sugarPurchased == "fortyfive")
+            {
+                player.cash -= priceOfFortyfiveSugar;
+                inventory.sugarInventory += 45;
                 Console.WriteLine("Thanks for your purchase! You now have {0} dollars.", player.cash);
             }
             else
@@ -131,24 +131,24 @@ namespace LemonadeStand
 
         public void SellIce(Player player, Inventory inventory)
         {
-            Console.WriteLine("Would you like to buy 'five' bundles of ice for $2.00, 'ten' for $4.00, or 'fifteen' for $6.00?");
+            Console.WriteLine("Would you like to buy 'fifteen' bundles of ice for $2.00, 'thirty' for $4.00, or 'fortyfive' for $6.00?");
             icePurchased = Console.ReadLine();
-            if (icePurchased == "five")
-            {
-                player.cash -= priceOfFiveIce;
-                inventory.iceInventory += 5;
-                Console.WriteLine("Thanks for your purchase! You now have {0} dollars.", player.cash);
-            }
-            else if (icePurchased == "ten")
-            {
-                player.cash -= priceOfTenIce;
-                inventory.iceInventory += 10;
-                Console.WriteLine("Thanks for your purchase! You now have {0} dollars.", player.cash);
-            }
-            else if (icePurchased == "fifteen")
+            if (icePurchased == "fifteen")
             {
                 player.cash -= priceOfFifteenIce;
                 inventory.iceInventory += 15;
+                Console.WriteLine("Thanks for your purchase! You now have {0} dollars.", player.cash);
+            }
+            else if (icePurchased == "thirty")
+            {
+                player.cash -= priceOfThirtyIce;
+                inventory.iceInventory += 30;
+                Console.WriteLine("Thanks for your purchase! You now have {0} dollars.", player.cash);
+            }
+            else if (icePurchased == "fortyfive")
+            {
+                player.cash -= priceOfFortyfiveIce;
+                inventory.iceInventory += 45;
                 Console.WriteLine("Thanks for your purchase! You now have {0} dollars.", player.cash);
             }
             else

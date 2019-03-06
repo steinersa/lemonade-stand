@@ -12,7 +12,7 @@ namespace LemonadeStand
         //constructor
         public Lemonade()
         {
-            this.price = 2.00;
+            this.price = 1.00;
         }
 
         //member methods

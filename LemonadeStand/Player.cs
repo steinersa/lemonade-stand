@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace LemonadeStand
@@ -10,6 +11,10 @@ namespace LemonadeStand
         public string name;
         public string beginDayChoice;
         public double cash;
+        public int lemonsToCups;
+        public int sugarToCups;
+        public int iceToCups;
+        public int cupsAvailableToSell;
 
         //constructor
         public Player(double cash)
@@ -50,7 +55,6 @@ namespace LemonadeStand
                     ChooseWhatToDoAtStartOfDay(inventory, store, player, recipe, lemonade);
                     break;
                 case "open for business":
-                    //go to start day?
                     break;
                 default:
                     Console.Write("Oops, not a choice. Please enter a valid option from above!");
@@ -59,9 +63,14 @@ namespace LemonadeStand
             }
         }
 
-        public void MakeLemonade()
+        public void MakeLemonade(Inventory inventory, Recipe recipe)
         {
-            
+            lemonsToCups = inventory.lemonInventory / recipe.lemonsAdded;
+            sugarToCups = inventory.sugarInventory/recipe.sugarAdded;
+            iceToCups = inventory.iceInventory/recipe.iceAdded;
+            int[] possibleNumberOfCups = { lemonsToCups, sugarToCups, iceToCups };
+            cupsAvailableToSell = possibleNumberOfCups.Min();
+            Console.WriteLine("You made {0} cups of lemonade to sell today! This number is based on your inventory and recipe.", cupsAvailableToSell);
         }
 
         public void SellLemonade()

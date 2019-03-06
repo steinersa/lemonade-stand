@@ -42,6 +42,11 @@ namespace LemonadeStand
             actualTemp = new ActualWeather();
             actualTemp.GenerateWeather();
             player.ChooseWhatToDoAtStartOfDay(inventory, store, player, recipe, lemonade);
+            player.MakeLemonade(inventory, recipe);
+            Console.ReadLine();
+            //player.sellLemonade
+            //display daily stats
+            //start next day (if day count less than or equal to 7)(day.GoToNextDay)
         }
 
     }
