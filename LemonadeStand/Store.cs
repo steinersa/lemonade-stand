@@ -61,7 +61,6 @@ namespace LemonadeStand
                     SellToPlayer(player, inventory, store, recipe);
                     break;
                 case "leave store":
-                    player.ChooseWhatToDoAtStartOfDay(inventory, store, player, recipe);
                     break;
                 default:
                     Console.Write("Oops, not a choice. Please enter a valid option from above!");

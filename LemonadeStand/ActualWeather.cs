@@ -18,7 +18,7 @@ namespace LemonadeStand
         public override void GenerateWeather()
         {
             weather = RandomNumber(60, 110);
-            Console.WriteLine(weather);
+            Console.WriteLine("The temperature today is: {0}", weather);
         }
 
     }

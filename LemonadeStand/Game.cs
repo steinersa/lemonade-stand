@@ -24,7 +24,7 @@ namespace LemonadeStand
         public void GameSetup()
         {
             Console.WriteLine("Welcome to your new lemonade stand! Please enter your name before we go any further...");
-            player = new Player(20);
+            player = new Player(50);
             player.GetName();
             Console.WriteLine("Nice to meet you, {0}! Directions are as follows...", player.name);
             weeklyForcast = new PredictedWeather();
