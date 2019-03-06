@@ -25,7 +25,7 @@ namespace LemonadeStand
             name = Console.ReadLine();
         }
 
-        public void ChooseWhatToDoAtStartOfDay(Inventory inventory, Store store, Player player, Recipe recipe)
+        public void ChooseWhatToDoAtStartOfDay(Inventory inventory, Store store, Player player, Recipe recipe, Lemonade lemonade)
         {
             Console.WriteLine("Before you begin selling for the day, would you like to 'check inventory', 'go to store', 'change recipe', or 'change price'? If you're all set to go, please type 'open for business'!");
             beginDayChoice = Console.ReadLine();
@@ -35,51 +35,31 @@ namespace LemonadeStand
             {
                 case "check inventory":
                     inventory.DisplayInventory(store);
-                    ChooseWhatToDoAtStartOfDay(inventory, store, player, recipe);
+                    ChooseWhatToDoAtStartOfDay(inventory, store, player, recipe, lemonade);
                     break;
                 case "go to store":
                     store.SellToPlayer(player, inventory, store, recipe);
-                    ChooseWhatToDoAtStartOfDay(inventory, store, player, recipe);
+                    ChooseWhatToDoAtStartOfDay(inventory, store, player, recipe, lemonade);
                     break;
                 case "change recipe":
                     recipe.ChangeRecipe();
-                    ChooseWhatToDoAtStartOfDay(inventory, store, player, recipe);
+                    ChooseWhatToDoAtStartOfDay(inventory, store, player, recipe, lemonade);
                     break;
                 case "change price":
-                    //go to change price
-                    ChooseWhatToDoAtStartOfDay(inventory, store, player, recipe);
+                    lemonade.ChangePrice();
+                    ChooseWhatToDoAtStartOfDay(inventory, store, player, recipe, lemonade);
                     break;
                 case "open for business":
                     //go to start day?
                     break;
                 default:
                     Console.Write("Oops, not a choice. Please enter a valid option from above!");
-                    ChooseWhatToDoAtStartOfDay(inventory, store, player, recipe);
+                    ChooseWhatToDoAtStartOfDay(inventory, store, player, recipe, lemonade);
                     break;
             }
         }
 
         public void MakeLemonade()
-        {
-            
-        }
-
-        public void GoToStore()
-        {
-            
-        }
-
-        public void BuyInventory()
-        {
-            
-        }
-
-        public void CheckInventory()
-        {
-            
-        }
-
-        public void ChangeRecipe()
         {
             
         }

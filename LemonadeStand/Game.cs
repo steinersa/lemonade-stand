@@ -13,6 +13,7 @@ namespace LemonadeStand
         public Store store;
         public Recipe recipe;
         public Weather actualTemp;
+        public Lemonade lemonade;
 
         //constructor
         public Game()
@@ -29,17 +30,18 @@ namespace LemonadeStand
             Console.WriteLine("Nice to meet you, {0}! Directions are as follows...", player.name);
             weeklyForcast = new PredictedWeather();
             weeklyForcast.GenerateWeather();
-            RunGame();
-        }
-
-        public void RunGame() //some sort of loop. careful because will clear out inventory and store... need to move them out
-        {
             inventory = new Inventory();
             store = new Store();
             recipe = new Recipe();
+            lemonade = new Lemonade();
+            RunGame();
+        }
+
+        public void RunGame()
+        {
             actualTemp = new ActualWeather();
             actualTemp.GenerateWeather();
-            player.ChooseWhatToDoAtStartOfDay(inventory, store, player, recipe);
+            player.ChooseWhatToDoAtStartOfDay(inventory, store, player, recipe, lemonade);
         }
 
     }
