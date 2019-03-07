@@ -28,7 +28,7 @@ namespace LemonadeStand
 
             foreach (int temp in weeklyForcastArray)
             {
-                Console.WriteLine(temp);
+                Console.WriteLine($"{temp} degrees");
             }
 
         }

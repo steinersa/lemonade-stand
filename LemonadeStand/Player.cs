@@ -37,7 +37,6 @@ namespace LemonadeStand
 
         public void GetName()
         {
-            Console.WriteLine("Please enter your name:");
             name = Console.ReadLine();
         }
 
