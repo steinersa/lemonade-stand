@@ -17,6 +17,7 @@ namespace LemonadeStand
         public Day day;
         double totalProfit;
         int dayOfWeek;
+        public string endOfGameChoice;
 
         //constructor
         public Game()
@@ -53,13 +54,29 @@ namespace LemonadeStand
                 totalProfit += day.CalculateDailyProfit();
                 Console.WriteLine($"With today complete and added to the books, you've made {totalProfit} dollars at your lemonade stand so far!");
                 dayOfWeek += day.NextDay();
-                Console.WriteLine($"Onto day {dayOfWeek}!");
+                Console.WriteLine($"Onto day {dayOfWeek + 1}!");
                 RunGame();
             }
             else
             {
                 Console.WriteLine($"Time flies when you're having fun! A week is already over. You made a total profit of {totalProfit} dollars at your lemonade stand. Would you like to 'play again' and see if you can earn more, or would you like to 'quit' the game?");
-                Console.ReadLine();
+                endOfGameChoice = Console.ReadLine();
+                switch (endOfGameChoice)
+                {
+                    case "play again":
+                        dayOfWeek = 0;
+                        GameSetup();
+                        break;
+                    case "quit":
+                        Environment.Exit(0);
+                        break;
+                    default:
+                        Console.WriteLine("Oops, not an option. Try again!");
+                        RunGame();
+                        break;
+                }
+
+
             }
         }
     }

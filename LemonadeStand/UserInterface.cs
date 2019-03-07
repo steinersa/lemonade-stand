@@ -16,24 +16,9 @@ namespace LemonadeStand
         }
 
         //member methods
-        public void DisplayWeeklyWeatherForcast()
+        public void Welcome()
         {
-            
-        }
-
-        public void DisplayActualTemp()
-        {
-            
-        }
-
-        public void DisplayInventory()
-        {
-            
-        }
-
-        public void DisplayRecipe()
-        {
-            
+            Console.WriteLine("Welcome to your new lemonade stand! Please enter your name before we go any further...");
         }
     }
 }

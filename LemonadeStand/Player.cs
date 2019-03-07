@@ -24,6 +24,8 @@ namespace LemonadeStand
         public Customer haley;
         public Customer carly;
         public Customer henry;
+        public Customer lenny;
+        public Customer marco;
 
         //constructor
         public Player(double cash)
@@ -87,11 +89,15 @@ namespace LemonadeStand
 
         public void SellLemonade(Player player, Lemonade lemonade, Day day, Weather actualTemp)
         {
+            lenny = new Customer("Lenny", 60, 7.00);
+            lenny.BuyLemonade(player, lemonade, day, actualTemp);
+            marco = new Customer("Marco", 65, 6.00);
+            marco.BuyLemonade(player, lemonade, day, actualTemp);
             sally = new Customer("Sally", 65, 1.00);
             sally.BuyLemonade(player, lemonade, day, actualTemp);
-            ted = new Customer("Ted", 75, 7.00);
+            ted = new Customer("Ted", 80, 7.00);
             ted.BuyLemonade(player, lemonade, day, actualTemp);
-            jeff = new Customer("Jeff", 70, 3.00);
+            jeff = new Customer("Jeff", 90, 5.00);
             jeff.BuyLemonade(player, lemonade, day, actualTemp);
             anna = new Customer("Anna", 80, 5.00);
             anna.BuyLemonade(player, lemonade, day, actualTemp);
