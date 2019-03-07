@@ -19,10 +19,11 @@ namespace LemonadeStand
         }
 
         //member methods
-        public void CalculateDailyProfit()
+        public double CalculateDailyProfit()
         {
-            dailyProfit = moneyMadeToday -= moneySpentToday;
-            Console.WriteLine("You made " + moneyMadeToday + " dollars today! You spent " + moneySpentToday + " dollars on supplies, making your daily profit " +dailyProfit+ " dollars!");
+            dailyProfit = moneyMadeToday - moneySpentToday;
+            Console.WriteLine("You made " + moneyMadeToday + " dollars today at the stand! You spent " + moneySpentToday + " dollars on supplies, making your daily profit " +dailyProfit+ " dollars!");
+            return dailyProfit;
         }
 
 

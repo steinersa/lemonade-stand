@@ -15,6 +15,7 @@ namespace LemonadeStand
         public Weather actualTemp;
         public Lemonade lemonade;
         public Day day;
+        double totalProfit;
 
         //constructor
         public Game()
@@ -26,9 +27,9 @@ namespace LemonadeStand
         public void GameSetup()
         {
             Console.WriteLine("Welcome to your new lemonade stand! Please enter your name before we go any further...");
-            player = new Player(50);
+            player = new Player(20);
             player.GetName();
-            Console.WriteLine("Nice to meet you, {0}! Directions are as follows...", player.name);
+            Console.WriteLine($"Nice to meet you, {player.name}! Directions are as follows...");
             weeklyForcast = new PredictedWeather();
             weeklyForcast.GenerateWeather();
             inventory = new Inventory();
@@ -43,13 +44,14 @@ namespace LemonadeStand
             day = new Day();
             actualTemp = new ActualWeather();
             actualTemp.GenerateWeather();
-            player.ChooseWhatToDoAtStartOfDay(inventory, store, player, recipe, lemonade);
+            player.ChooseWhatToDoAtStartOfDay(inventory, store, player, recipe, lemonade, day);
             player.MakeLemonade(inventory, recipe);
-            player.SellLemonade();
-            //day.CalculateDailyProfit();
+            player.SellLemonade(player, lemonade, day, actualTemp);
+            totalProfit += day.CalculateDailyProfit();
+            Console.WriteLine($"With today complete and added to the books, so far you've made {totalProfit} dollars at your lemonade stand!");
+            Console.ReadLine();
             //display running total make an array here that the daily profit is pushed to
             //start next day (if run game count less than or equal to 7)
         }
-
     }
 }

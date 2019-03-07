@@ -10,26 +10,44 @@ namespace LemonadeStand
         public string name;
         public int weatherPreference;
         public double moneyToSpend;
-        public string recipePreference;
 
 
         //constructor
-        public Customer(string name, int weatherPreference, double moneyToSpend, string recipePreference)
+        public Customer(string name, int weatherPreference, double moneyToSpend)
         {
             this.name = name;
             this.weatherPreference = weatherPreference;
             this.moneyToSpend = moneyToSpend;
-            this.recipePreference = recipePreference;
+          
 
         }
 
         //member methods
-        public void BuyLemonade()
-        {
-            //for each customer in a list...
-            //buy
-         
+        public void BuyLemonade(Player player, Lemonade lemonade, Day day, Weather actualTemp)
+        {   
+            //Customer sally = new Customer("Sally", 65, 1.00);
+            //Customer peter = new Customer("Peter", 75, 8.00);
+
+            //List<Customer> customers = new List<Customer>();
+            //customers.Add(sally);
+            //customers.Add(peter);
+
+            
+            
+                //foreach (Customer thing in customers)
+                //{
+                    if (weatherPreference <= actualTemp.weather && moneyToSpend >= lemonade.price && player.cupsAvailableToSell > 0)
+                    {
+                        player.cash += lemonade.price;
+                        day.moneyMadeToday += lemonade.price;
+                        player.cupsAvailableToSell --;
+                        Console.WriteLine("Thank you! From, {0}", this.name);
+                    }
+                //}
+            
+
         }
+
     }
 }
 
