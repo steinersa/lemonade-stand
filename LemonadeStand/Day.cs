@@ -10,12 +10,13 @@ namespace LemonadeStand
         public double moneySpentToday;
         public double moneyMadeToday;
         public double dailyProfit;
+        public int dayCount;
        
 
         //constructor
         public Day()
         {
-
+            
         }
 
         //member methods
@@ -24,6 +25,12 @@ namespace LemonadeStand
             dailyProfit = moneyMadeToday - moneySpentToday;
             Console.WriteLine("You made " + moneyMadeToday + " dollars today at the stand! You spent " + moneySpentToday + " dollars on supplies, making your daily profit " +dailyProfit+ " dollars!");
             return dailyProfit;
+        }
+
+        public int NextDay()
+        {
+            dayCount++;
+            return dayCount;
         }
 
 

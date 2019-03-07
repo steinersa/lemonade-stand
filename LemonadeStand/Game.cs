@@ -16,6 +16,7 @@ namespace LemonadeStand
         public Lemonade lemonade;
         public Day day;
         double totalProfit;
+        int dayOfWeek;
 
         //constructor
         public Game()
@@ -41,17 +42,25 @@ namespace LemonadeStand
 
         public void RunGame()
         {
-            day = new Day();
-            actualTemp = new ActualWeather();
-            actualTemp.GenerateWeather();
-            player.ChooseWhatToDoAtStartOfDay(inventory, store, player, recipe, lemonade, day);
-            player.MakeLemonade(inventory, recipe);
-            player.SellLemonade(player, lemonade, day, actualTemp);
-            totalProfit += day.CalculateDailyProfit();
-            Console.WriteLine($"With today complete and added to the books, so far you've made {totalProfit} dollars at your lemonade stand!");
-            Console.ReadLine();
-            //display running total make an array here that the daily profit is pushed to
-            //start next day (if run game count less than or equal to 7)
+            if (dayOfWeek < 7)
+            {
+                day = new Day();
+                actualTemp = new ActualWeather();
+                actualTemp.GenerateWeather();
+                player.ChooseWhatToDoAtStartOfDay(inventory, store, player, recipe, lemonade, day);
+                player.MakeLemonade(inventory, recipe);
+                player.SellLemonade(player, lemonade, day, actualTemp);
+                totalProfit += day.CalculateDailyProfit();
+                Console.WriteLine($"With today complete and added to the books, you've made {totalProfit} dollars at your lemonade stand so far!");
+                dayOfWeek += day.NextDay();
+                Console.WriteLine($"Onto day {dayOfWeek}!");
+                RunGame();
+            }
+            else
+            {
+                Console.WriteLine($"Time flies when you're having fun! A week is already over. You made a total profit of {totalProfit} dollars at your lemonade stand. Would you like to 'play again' and see if you can earn more, or would you like to 'quit' the game?");
+                Console.ReadLine();
+            }
         }
     }
 }

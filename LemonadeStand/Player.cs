@@ -79,7 +79,10 @@ namespace LemonadeStand
             iceToCups = inventory.iceInventory/recipe.iceAdded;
             int[] possibleNumberOfCups = { lemonsToCups, sugarToCups, iceToCups };
             cupsAvailableToSell = possibleNumberOfCups.Min();
-            Console.WriteLine("You made {0} cups of lemonade to sell today! This number is based on your inventory and recipe.", cupsAvailableToSell);
+            inventory.lemonInventory -= (recipe.lemonsAdded * cupsAvailableToSell);
+            inventory.sugarInventory -= (recipe.sugarAdded * cupsAvailableToSell);
+            inventory.iceInventory -= (recipe.iceAdded * cupsAvailableToSell);
+            Console.WriteLine("You made {0} cups of lemonade to sell today based on your available supplies and recipe.", cupsAvailableToSell);
         }
 
         public void SellLemonade(Player player, Lemonade lemonade, Day day, Weather actualTemp)
