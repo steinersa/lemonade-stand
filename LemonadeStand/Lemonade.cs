@@ -22,7 +22,9 @@ namespace LemonadeStand
             Console.WriteLine("Please enter the price you'd like to sell a cup of lemonade for.");
             try
             {
+                Console.ForegroundColor = ConsoleColor.Magenta;
                 double resultPrice = Convert.ToDouble(Console.ReadLine());
+                Console.ResetColor();
                 this.price = resultPrice;
                 Console.WriteLine("Your lemonade now costs {0} dollars a cup!", this.price);
             }

@@ -28,7 +28,9 @@ namespace LemonadeStand
         {
             Console.WriteLine("The current recipe is set at " +this.lemonsAdded+ " lemons, " +this.sugarAdded+ " sugar packets, and " +this.iceAdded+ " ice bundles per cup of lemonade!");
             Console.WriteLine("Would you like to change the amount of 'lemons', 'sugar', or 'ice'? Otherwise, if the recipe looks good to go, type 'exit'.");
+            Console.ForegroundColor = ConsoleColor.Magenta;
             recipeChoice = Console.ReadLine();
+            Console.ResetColor();
             
             switch (recipeChoice)
             {
@@ -56,7 +58,9 @@ namespace LemonadeStand
         public void ChangeLemons()
         {
             Console.WriteLine("Please enter the number of lemons you'd like in each cup.");
+            Console.ForegroundColor = ConsoleColor.Magenta;
             string userAddingLemons = Console.ReadLine();
+            Console.ResetColor();
             try
             {
                 int resultLemons = Int32.Parse(userAddingLemons);
@@ -72,7 +76,9 @@ namespace LemonadeStand
         public void ChangeSugar()
         {
             Console.WriteLine("Please enter the number of sugar packets you'd like in each cup.");
+            Console.ForegroundColor = ConsoleColor.Magenta;
             string userAddingSugar = Console.ReadLine();
+            Console.ResetColor();
             try
             {
                 int resultSugar = Int32.Parse(userAddingSugar);
@@ -88,7 +94,9 @@ namespace LemonadeStand
         public void ChangeIce()
         {
             Console.WriteLine("Please enter the number of ice bundles you'd like in each cup.");
+            Console.ForegroundColor = ConsoleColor.Magenta;
             string userAddingIce = Console.ReadLine();
+            Console.ResetColor();
             try
             {
                 int resultIce = Int32.Parse(userAddingIce);

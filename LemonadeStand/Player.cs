@@ -37,14 +37,17 @@ namespace LemonadeStand
 
         public void GetName()
         {
+            Console.ForegroundColor = ConsoleColor.Magenta;
             name = Console.ReadLine();
+            Console.ResetColor();
         }
 
         public void ChooseWhatToDoAtStartOfDay(Inventory inventory, Store store, Player player, Recipe recipe, Lemonade lemonade, Day day)
         {
             Console.WriteLine("Before you begin selling for the day, would you like to 'check inventory', 'go to store', 'change recipe', or 'change price'? If you're all set to go, please type 'open for business'!");
+            Console.ForegroundColor = ConsoleColor.Magenta;
             beginDayChoice = Console.ReadLine();
-
+            Console.ResetColor();
 
             switch (beginDayChoice)
             {
@@ -67,7 +70,7 @@ namespace LemonadeStand
                 case "open for business":
                     break;
                 default:
-                    Console.Write("Oops, not a choice. Please enter a valid option from above!");
+                    Console.WriteLine("Oops, not a choice. Please enter a valid option from above!");
                     ChooseWhatToDoAtStartOfDay(inventory, store, player, recipe, lemonade, day);
                     break;
             }

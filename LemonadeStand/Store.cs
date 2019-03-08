@@ -44,7 +44,9 @@ namespace LemonadeStand
         public void SellToPlayer(Player player, Inventory inventory, Store store, Recipe recipe, Day day)
         {
             Console.WriteLine("Would you like to buy 'lemons', 'sugar', or 'ice'? If you're all done shopping, please type 'leave store'.");
+            Console.ForegroundColor = ConsoleColor.Magenta;
             storeChoice = Console.ReadLine();
+            Console.ResetColor();
 
             switch (storeChoice)
             {
@@ -63,7 +65,7 @@ namespace LemonadeStand
                 case "leave store":
                     break;
                 default:
-                    Console.Write("Oops, not a choice. Please enter a valid option from above!");
+                    Console.WriteLine("Oops, not a choice. Please enter a valid option from above!");
                     SellToPlayer(player, inventory, store, recipe, day);
                     break;
 
@@ -72,8 +74,10 @@ namespace LemonadeStand
         
         public void SellLemons(Player player, Inventory inventory, Day day)
         {
-            Console.WriteLine("Would you like to buy 'fifteen' lemons for $3.00, 'thirty' for $5.00, or 'fortyfive' for $7.00?");
+            Console.WriteLine($"Would you like to buy 'fifteen' lemons for ${priceOfFifteenLemons}, 'thirty' for ${priceOfThirtyLemons}, or 'fortyfive' for ${priceOfFortyfiveLemons}?");
+            Console.ForegroundColor = ConsoleColor.Magenta;
             lemonsPurchased = Console.ReadLine();
+            Console.ResetColor();
             if (lemonsPurchased == "fifteen")
             {
                 player.cash -= priceOfFifteenLemons;
@@ -105,8 +109,10 @@ namespace LemonadeStand
 
         public void SellSugar(Player player, Inventory inventory, Day day)
         {
-            Console.WriteLine("Would you like to buy 'fifteen' packs of sugar for $5.00, 'thirty' for $9.00, or 'fortyfive' for $13.00?");
+            Console.WriteLine($"Would you like to buy 'fifteen' packs of sugar for ${priceOfFifteenSugar}, 'thirty' for ${priceOfThirtySugar}, or 'fortyfive' for ${priceOfFortyfiveSugar}?");
+            Console.ForegroundColor = ConsoleColor.Magenta;
             sugarPurchased = Console.ReadLine();
+            Console.ResetColor();
             if (sugarPurchased == "fifteen")
             {
                 player.cash -= priceOfFifteenSugar;
@@ -137,8 +143,10 @@ namespace LemonadeStand
 
         public void SellIce(Player player, Inventory inventory, Day day)
         {
-            Console.WriteLine("Would you like to buy 'fifteen' bundles of ice for $2.00, 'thirty' for $4.00, or 'fortyfive' for $6.00?");
+            Console.WriteLine($"Would you like to buy 'fifteen' bundles of ice for ${priceOfFifteenIce}, 'thirty' for ${priceOfThirtyIce}, or 'fortyfive' for ${priceOfFortyfiveIce}?");
+            Console.ForegroundColor = ConsoleColor.Magenta;
             icePurchased = Console.ReadLine();
+            Console.ResetColor();
             if (icePurchased == "fifteen")
             {
                 player.cash -= priceOfFifteenIce;
