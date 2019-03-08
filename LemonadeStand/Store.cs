@@ -83,21 +83,21 @@ namespace LemonadeStand
                 player.cash -= priceOfFifteenLemons;
                 inventory.lemonInventory += 15;
                 day.moneySpentToday += priceOfFifteenLemons;
-                Console.WriteLine("Thanks for your purchase! You now have {0} dollars.", player.cash);
+                Console.WriteLine($"Thanks for your purchase! You now have {player.cash} dollars.");
             }
             else if (lemonsPurchased == "thirty")
             {
                 player.cash -= priceOfThirtyLemons;
                 inventory.lemonInventory += 30;
                 day.moneySpentToday += priceOfThirtyLemons;
-                Console.WriteLine("Thanks for your purchase! You now have {0} dollars.", player.cash);
+                Console.WriteLine($"Thanks for your purchase! You now have {player.cash} dollars.");
             }
             else if (lemonsPurchased == "fortyfive")
             {
                 player.cash -= priceOfFortyfiveLemons;
                 inventory.lemonInventory += 45;
                 day.moneySpentToday += priceOfFortyfiveLemons;
-                Console.WriteLine("Thanks for your purchase! You now have {0} dollars.", player.cash);
+                Console.WriteLine($"Thanks for your purchase! You now have {player.cash} dollars.");
             }
             else
             {
@@ -118,21 +118,21 @@ namespace LemonadeStand
                 player.cash -= priceOfFifteenSugar;
                 inventory.sugarInventory += 15;
                 day.moneySpentToday += priceOfFifteenSugar;
-                Console.WriteLine("Thanks for your purchase! You now have {0} dollars.", player.cash);
+                Console.WriteLine($"Thanks for your purchase! You now have {player.cash} dollars.");
             }
             else if (sugarPurchased == "thirty")
             {
                 player.cash -= priceOfThirtySugar;
                 inventory.sugarInventory += 30;
                 day.moneySpentToday += priceOfThirtySugar;
-                Console.WriteLine("Thanks for your purchase! You now have {0} dollars.", player.cash);
+                Console.WriteLine($"Thanks for your purchase! You now have {player.cash} dollars.");
             }
             else if (sugarPurchased == "fortyfive")
             {
                 player.cash -= priceOfFortyfiveSugar;
                 inventory.sugarInventory += 45;
                 day.moneySpentToday += priceOfFortyfiveSugar;
-                Console.WriteLine("Thanks for your purchase! You now have {0} dollars.", player.cash);
+                Console.WriteLine($"Thanks for your purchase! You now have {player.cash} dollars.");
             }
             else
             {
@@ -152,21 +152,21 @@ namespace LemonadeStand
                 player.cash -= priceOfFifteenIce;
                 inventory.iceInventory += 15;
                 day.moneySpentToday += priceOfFifteenIce;
-                Console.WriteLine("Thanks for your purchase! You now have {0} dollars.", player.cash);
+                Console.WriteLine($"Thanks for your purchase! You now have {player.cash} dollars.");
             }
             else if (icePurchased == "thirty")
             {
                 player.cash -= priceOfThirtyIce;
                 inventory.iceInventory += 30;
                 day.moneySpentToday += priceOfThirtyIce;
-                Console.WriteLine("Thanks for your purchase! You now have {0} dollars.", player.cash);
+                Console.WriteLine($"Thanks for your purchase! You now have {player.cash} dollars.");
             }
             else if (icePurchased == "fortyfive")
             {
                 player.cash -= priceOfFortyfiveIce;
                 inventory.iceInventory += 45;
                 day.moneySpentToday += priceOfFortyfiveIce;
-                Console.WriteLine("Thanks for your purchase! You now have {0} dollars.", player.cash);
+                Console.WriteLine($"Thanks for your purchase! You now have {player.cash} dollars.");
             }
             else
             {

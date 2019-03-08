@@ -60,7 +60,7 @@ namespace LemonadeStand
                 player.SellLemonade(player, lemonade, day, actualTemp);
                 totalProfit += day.CalculateDailyProfit();
                 userInterface.Pause();
-                Console.WriteLine($"With today complete and added to the books, you've made {totalProfit} dollars at your lemonade stand so far!");
+                DisplayTotalProfit();
                 dayOfWeek += day.NextDay();
                 userInterface.Pause();
                 RunGame();
@@ -87,5 +87,23 @@ namespace LemonadeStand
 
             }
         }
+
+        public void DisplayTotalProfit()
+        {
+            if (totalProfit >= 0)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine($"So far you've made a total profit of {totalProfit} dollars!");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.WriteLine($"So far you're at a loss of {totalProfit} dollars.");
+                Console.ResetColor();
+            }
+            
+        }
+
     }
 }

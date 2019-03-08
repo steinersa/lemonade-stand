@@ -23,8 +23,16 @@ namespace LemonadeStand
         public double CalculateDailyProfit()
         {
             dailyProfit = moneyMadeToday - moneySpentToday;
-            Console.WriteLine("You made " + moneyMadeToday + " dollars today at the stand! You spent " + moneySpentToday + " dollars on supplies, making your daily profit " +dailyProfit+ " dollars!");
-            return dailyProfit;
+            if (dailyProfit >= 0)
+            {
+                Console.WriteLine($"You made {moneyMadeToday} dollars today at the stand! You spent {moneySpentToday} dollars on supplies, making it a daily profit of {dailyProfit} dollars!");
+                return dailyProfit;
+            }
+            else
+            {
+                Console.WriteLine($"You made {moneyMadeToday} dollars today at the stand! You spent {moneySpentToday} dollars on supplies, making it a daily loss of {dailyProfit} dollars!");
+                return dailyProfit;
+            }
         }
 
         public int NextDay()

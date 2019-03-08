@@ -18,7 +18,7 @@ namespace LemonadeStand
         //member methods
         public void ChangePrice()
         {
-            Console.WriteLine("The current price per cup is {0} dollars.", this.price);
+            Console.WriteLine($"The current price per cup is {this.price} dollars.");
             Console.WriteLine("Please enter the price you'd like to sell a cup of lemonade for.");
             try
             {
@@ -26,7 +26,7 @@ namespace LemonadeStand
                 double resultPrice = Convert.ToDouble(Console.ReadLine());
                 Console.ResetColor();
                 this.price = resultPrice;
-                Console.WriteLine("Your lemonade now costs {0} dollars a cup!", this.price);
+                Console.WriteLine($"Your lemonade now costs {this.price} dollars a cup!");
             }
             catch (FormatException)
             {

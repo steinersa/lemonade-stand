@@ -26,6 +26,10 @@ namespace LemonadeStand
         public Customer henry;
         public Customer lenny;
         public Customer marco;
+        public Customer beth;
+        public Customer chris;
+        public Customer elliot;
+        public Customer claire;
 
         //constructor
         public Player(double cash)
@@ -86,7 +90,7 @@ namespace LemonadeStand
             inventory.lemonInventory -= (recipe.lemonsAdded * cupsAvailableToSell);
             inventory.sugarInventory -= (recipe.sugarAdded * cupsAvailableToSell);
             inventory.iceInventory -= (recipe.iceAdded * cupsAvailableToSell);
-            Console.WriteLine("You made {0} cups of lemonade to sell today based on your available supplies and recipe.", cupsAvailableToSell);
+            Console.WriteLine($"You made {cupsAvailableToSell} cups of lemonade to sell today.");
         }
 
         public void SellLemonade(Player player, Lemonade lemonade, Day day, Weather actualTemp)
@@ -113,6 +117,14 @@ namespace LemonadeStand
             carly.BuyLemonade(player, lemonade, day, actualTemp);
             henry = new Customer("Henry", 80, 3.00);
             henry.BuyLemonade(player, lemonade, day, actualTemp);
+            beth = new Customer("Beth", 100, 2.00);
+            beth.BuyLemonade(player, lemonade, day, actualTemp);
+            chris = new Customer("Chris", 85, 8.00);
+            chris.BuyLemonade(player, lemonade, day, actualTemp);
+            elliot = new Customer("Elliot", 75, 5.00);
+            elliot.BuyLemonade(player, lemonade, day, actualTemp);
+            claire = new Customer("Claire", 95, 2.00);
+            claire.BuyLemonade(player, lemonade, day, actualTemp);
         }
     }
 }

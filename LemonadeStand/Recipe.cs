@@ -26,7 +26,7 @@ namespace LemonadeStand
         //member methods
         public void ChangeRecipe()
         {
-            Console.WriteLine("The current recipe is set at " +this.lemonsAdded+ " lemons, " +this.sugarAdded+ " sugar packets, and " +this.iceAdded+ " ice bundles per cup of lemonade!");
+            Console.WriteLine($"The current recipe is set at {this.lemonsAdded} lemons, {this.sugarAdded} sugar packets, and {this.iceAdded} ice bundles per cup of lemonade!");
             Console.WriteLine("Would you like to change the amount of 'lemons', 'sugar', or 'ice'? Otherwise, if the recipe looks good to go, type 'exit'.");
             Console.ForegroundColor = ConsoleColor.Magenta;
             recipeChoice = Console.ReadLine();
@@ -65,7 +65,7 @@ namespace LemonadeStand
             {
                 int resultLemons = Int32.Parse(userAddingLemons);
                 this.lemonsAdded = resultLemons;
-                Console.WriteLine("Your lemonade now contains {0} lemons!", this.lemonsAdded);
+                Console.WriteLine($"Your lemonade now contains {this.lemonsAdded} lemons!");
             }
             catch (FormatException)
             {
@@ -83,7 +83,7 @@ namespace LemonadeStand
             {
                 int resultSugar = Int32.Parse(userAddingSugar);
                 this.sugarAdded = resultSugar;
-                Console.WriteLine("Your lemonade now contains {0} packets of sugar!", this.sugarAdded);
+                Console.WriteLine($"Your lemonade now contains {this.sugarAdded} packets of sugar!");
             }
             catch (FormatException)
             {
@@ -101,7 +101,7 @@ namespace LemonadeStand
             {
                 int resultIce = Int32.Parse(userAddingIce);
                 this.iceAdded = resultIce;
-                Console.WriteLine("Your lemonade now contains {0} bundles of ice!", this.iceAdded);
+                Console.WriteLine($"Your lemonade now contains {this.iceAdded} bundles of ice!");
             }
             catch (FormatException)
             {
