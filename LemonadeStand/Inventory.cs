@@ -31,3 +31,6 @@ namespace LemonadeStand
 
     }
 }
+
+// SOLID Design: Single-Responsibility Principle
+// This class handles only one job, and that is store the inventory.

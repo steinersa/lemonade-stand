@@ -15,6 +15,7 @@ namespace LemonadeStand
         public int sugarToCups;
         public int iceToCups;
         public int cupsAvailableToSell;
+
         public Customer sally;
         public Customer ted;
         public Customer jeff;

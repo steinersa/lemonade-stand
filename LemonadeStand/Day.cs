@@ -40,7 +40,5 @@ namespace LemonadeStand
             dayCount++;
             return dayCount;
         }
-
-
     }
 }

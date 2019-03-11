@@ -25,3 +25,6 @@ namespace LemonadeStand
 
     }
 }
+
+// SOLID Design: Liskov Substitution Principle
+// I decided to have this class and a PredictedWeather class inherit from a parent Weather class because they are both generating a type of weather, but are doing so in slightly unique ways. They both use the parent's random number generator.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LemonadeStand
 {
-    public class Store //need to make sure player cash doesnt drop below zero
+    public class Store
     {
         //member variables
         public string storeChoice;
@@ -51,15 +51,15 @@ namespace LemonadeStand
             switch (storeChoice)
             {
                 case "lemons":
-                    SellLemons(player, inventory, day);
+                    SellLemons(player, inventory, day, store, recipe);
                     SellToPlayer(player, inventory, store, recipe, day);
                     break;
                 case "sugar":
-                    SellSugar(player, inventory, day);
+                    SellSugar(player, inventory, day, store, recipe);
                     SellToPlayer(player, inventory, store, recipe, day);
                     break;
                 case "ice":
-                    SellIce(player, inventory, day);
+                    SellIce(player, inventory, day, store, recipe);
                     SellToPlayer(player, inventory, store, recipe, day);
                     break;
                 case "leave store":
@@ -72,27 +72,27 @@ namespace LemonadeStand
             }
         }
         
-        public void SellLemons(Player player, Inventory inventory, Day day)
+        public void SellLemons(Player player, Inventory inventory, Day day, Store store, Recipe recipe)
         {
             Console.WriteLine($"Would you like to buy 'fifteen' lemons for ${priceOfFifteenLemons}, 'thirty' for ${priceOfThirtyLemons}, or 'fortyfive' for ${priceOfFortyfiveLemons}?");
             Console.ForegroundColor = ConsoleColor.Magenta;
             lemonsPurchased = Console.ReadLine();
             Console.ResetColor();
-            if (lemonsPurchased == "fifteen")
+            if (lemonsPurchased == "fifteen" && player.cash >= priceOfFifteenLemons)
             {
                 player.cash -= priceOfFifteenLemons;
                 inventory.lemonInventory += 15;
                 day.moneySpentToday += priceOfFifteenLemons;
                 Console.WriteLine($"Thanks for your purchase! You now have {player.cash} dollars.");
             }
-            else if (lemonsPurchased == "thirty")
+            else if (lemonsPurchased == "thirty" && player.cash >= priceOfThirtyLemons)
             {
                 player.cash -= priceOfThirtyLemons;
                 inventory.lemonInventory += 30;
                 day.moneySpentToday += priceOfThirtyLemons;
                 Console.WriteLine($"Thanks for your purchase! You now have {player.cash} dollars.");
             }
-            else if (lemonsPurchased == "fortyfive")
+            else if (lemonsPurchased == "fortyfive" && player.cash >= priceOfFortyfiveLemons)
             {
                 player.cash -= priceOfFortyfiveLemons;
                 inventory.lemonInventory += 45;
@@ -101,33 +101,31 @@ namespace LemonadeStand
             }
             else
             {
-                Console.WriteLine("Not an option. Try again!");
-                SellLemons(player, inventory, day);
+                Console.WriteLine("Not an option. Check your cash or typing skills.");
             }
-
         }
 
-        public void SellSugar(Player player, Inventory inventory, Day day)
+        public void SellSugar(Player player, Inventory inventory, Day day, Store store, Recipe recipe)
         {
             Console.WriteLine($"Would you like to buy 'fifteen' packs of sugar for ${priceOfFifteenSugar}, 'thirty' for ${priceOfThirtySugar}, or 'fortyfive' for ${priceOfFortyfiveSugar}?");
             Console.ForegroundColor = ConsoleColor.Magenta;
             sugarPurchased = Console.ReadLine();
             Console.ResetColor();
-            if (sugarPurchased == "fifteen")
+            if (sugarPurchased == "fifteen" && player.cash >= priceOfFifteenSugar)
             {
                 player.cash -= priceOfFifteenSugar;
                 inventory.sugarInventory += 15;
                 day.moneySpentToday += priceOfFifteenSugar;
                 Console.WriteLine($"Thanks for your purchase! You now have {player.cash} dollars.");
             }
-            else if (sugarPurchased == "thirty")
+            else if (sugarPurchased == "thirty" && player.cash >= priceOfThirtySugar)
             {
                 player.cash -= priceOfThirtySugar;
                 inventory.sugarInventory += 30;
                 day.moneySpentToday += priceOfThirtySugar;
                 Console.WriteLine($"Thanks for your purchase! You now have {player.cash} dollars.");
             }
-            else if (sugarPurchased == "fortyfive")
+            else if (sugarPurchased == "fortyfive" && player.cash >= priceOfFortyfiveSugar)
             {
                 player.cash -= priceOfFortyfiveSugar;
                 inventory.sugarInventory += 45;
@@ -136,32 +134,31 @@ namespace LemonadeStand
             }
             else
             {
-                Console.WriteLine("Not an option. Try again!");
-                SellSugar(player, inventory, day);
+                Console.WriteLine("Not an option. Check your cash or typing skills.");
             }
         }
 
-        public void SellIce(Player player, Inventory inventory, Day day)
+        public void SellIce(Player player, Inventory inventory, Day day, Store store, Recipe recipe)
         {
             Console.WriteLine($"Would you like to buy 'fifteen' bundles of ice for ${priceOfFifteenIce}, 'thirty' for ${priceOfThirtyIce}, or 'fortyfive' for ${priceOfFortyfiveIce}?");
             Console.ForegroundColor = ConsoleColor.Magenta;
             icePurchased = Console.ReadLine();
             Console.ResetColor();
-            if (icePurchased == "fifteen")
+            if (icePurchased == "fifteen" && player.cash >= priceOfFifteenIce)
             {
                 player.cash -= priceOfFifteenIce;
                 inventory.iceInventory += 15;
                 day.moneySpentToday += priceOfFifteenIce;
                 Console.WriteLine($"Thanks for your purchase! You now have {player.cash} dollars.");
             }
-            else if (icePurchased == "thirty")
+            else if (icePurchased == "thirty" && player.cash >= priceOfThirtyIce)
             {
                 player.cash -= priceOfThirtyIce;
                 inventory.iceInventory += 30;
                 day.moneySpentToday += priceOfThirtyIce;
                 Console.WriteLine($"Thanks for your purchase! You now have {player.cash} dollars.");
             }
-            else if (icePurchased == "fortyfive")
+            else if (icePurchased == "fortyfive" && player.cash >= priceOfFortyfiveIce)
             {
                 player.cash -= priceOfFortyfiveIce;
                 inventory.iceInventory += 45;
@@ -170,8 +167,7 @@ namespace LemonadeStand
             }
             else
             {
-                Console.WriteLine("Not an option. Try again!");
-                SellIce(player, inventory, day);
+                Console.WriteLine("Not an option. Check your cash or typing skills.");
             }
         }
 
